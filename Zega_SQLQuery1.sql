@@ -24,3 +24,5 @@ select * from tbtrans
 select npm,nama,tgl_lahir, case when kd_jenis='P' then 'Perempuan' else 'Laki-Laki' end as jenis from tbmhs where not kd_jenis='L'
 
 select * from tbmhs where not kd_jenis='L'
+
+select npm,nama,tgl_lahir, case when kd_jenis='P' then 'Perempuan' else 'Laki-Laki' end as jenis from tbmhs where not kd_jenis='L' and nama like 'J%'
