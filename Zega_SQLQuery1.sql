@@ -26,3 +26,5 @@ select npm,nama,tgl_lahir, case when kd_jenis='P' then 'Perempuan' else 'Laki-La
 select * from tbmhs where not kd_jenis='L'
 
 select npm,nama,tgl_lahir, case when kd_jenis='P' then 'Perempuan' else 'Laki-Laki' end as jenis from tbmhs where not kd_jenis='L' and nama like'%an%'
+
+select npm,nama,tgl_lahir, year(getdate())- year(tgl_lahir) as umur, case when kd_jenis='P' then 'Perempuan' else 'Laki-Laki' end as jenis from tbmhs where year(getdate())- year(tgl_lahir) > 20 and kd_jenis='L'
